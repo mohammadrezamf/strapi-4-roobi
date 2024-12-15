@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "my_landing_pages",
+  "info": {
+    "singularName": "my-landing-page",
+    "pluralName": "my-landing-pages",
+    "displayName": "my landing page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "forever": {
+      "type": "string"
+    }
+  }
+}
