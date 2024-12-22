@@ -362,6 +362,37 @@ export interface AdminUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiScheduleTimingScheduleTiming extends Schema.CollectionType {
+  collectionName: 'schedule_timings';
+  info: {
+    displayName: 'schedule timing';
+    pluralName: 'schedule-timings';
+    singularName: 'schedule-timing';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::schedule-timing.schedule-timing',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    Day: Attribute.String;
+    publishedAt: Attribute.DateTime;
+    Times: Attribute.JSON;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::schedule-timing.schedule-timing',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease extends Schema.CollectionType {
   collectionName: 'strapi_releases';
   info: {
@@ -798,6 +829,7 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::schedule-timing.schedule-timing': ApiScheduleTimingScheduleTiming;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
