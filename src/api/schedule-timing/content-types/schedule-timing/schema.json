@@ -4,7 +4,8 @@
   "info": {
     "singularName": "schedule-timing",
     "pluralName": "schedule-timings",
-    "displayName": "schedule timing"
+    "displayName": "general schedule timing",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

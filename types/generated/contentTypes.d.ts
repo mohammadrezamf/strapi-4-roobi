@@ -365,7 +365,8 @@ export interface AdminUser extends Schema.CollectionType {
 export interface ApiScheduleTimingScheduleTiming extends Schema.CollectionType {
   collectionName: 'schedule_timings';
   info: {
-    displayName: 'schedule timing';
+    description: '';
+    displayName: 'general schedule timing';
     pluralName: 'schedule-timings';
     singularName: 'schedule-timing';
   };
